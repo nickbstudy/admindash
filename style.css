@@ -182,10 +182,51 @@
 
 /* Flexbox for main content */
 #main {
-    border: 1px solid black;
     grid-area: main;
 }
 #main>h3{
     padding-top: 15px;
     padding-left: 18px;
+}
+#mainInner {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.projectCard {
+    display: grid;
+    background-color: white;
+    grid: 1fr 50px / 7px 1fr;
+    width: 350px;
+    height: 200px;
+    margin: 20px;
+    box-shadow: 4px 4px 6px #a1a1a1;
+    border-radius: 5px;;
+    grid-template-areas: 
+        "yellowBar cardContent"
+        "yellowBar cardIcons";
+}
+.yellowBar {
+    grid-area: yellowBar;
+    background-color: rgb(240, 180, 41);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.cardContent {
+    padding: 15px 10px 0px 10px;
+    grid-area: cardContent;
+    border-top-right-radius: 8px;
+    color: grey;
+}
+.cardContent>h3 {
+    color: black;
+}
+.cardIcons {
+    grid-area: cardIcons;
+    border-bottom-right-radius: 8px;
+    text-align:end;
+}
+.cardIcons>img {
+    margin: 5px;
+    padding-right: 10px;
 }
