@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 150px 1fr;
+    grid-template-areas: 
+        "sideNav topBar"
+        "sideNav mainBox";
+}
+
+#sideNav {
+    background-color: rgb(25, 146, 212);
+    color: white;
+    grid-area: sideNav;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+#sideHeader {
+    display: flex;
+    font-size: 1.4em;
+    align-items: center;
+}
+
+#sideLinks>ul>li {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+#sideLinks>ul>li>img {
+    padding: 10px 25px 10px 15px;
+}
+
+#topBar {
+    grid-area: topBar;
+    z-index: 2;
+    display: grid;
+    box-shadow: 0px 3px 4px #5f5f5f;
+    grid: 60px 1fr / 1fr 140px 260px;
+    grid-template-areas: 
+        "search search profile"
+        "greeting buttons buttons";
+}
+#search {
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+#search>input {
+    width: 600px;
+    height: 30px;
+    border: none;
+    background-color: rgb(228, 228, 228);
+    border-radius: 30px;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+#profile {
+    grid-area: profile;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: 600;
+}
+#greeting {
+    grid-area: greeting;
+}
+#buttons {
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#content {
+    grid-area: mainBox;
+    z-index: 1;
+    background-color: rgb(202, 202, 202);
+    display: grid;
+    
+}
+.sideImg {
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+}
+.tiny {
+    margin-top: 5px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.large {
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.profileButtons {
+    width: 90px;
+    height: 40px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-weight: 450;
+    background-color: rgb(25, 146, 212);
+    cursor: pointer;
+}
